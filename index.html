@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+    <title>Shoodi</title>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/3aa80303c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'components/styles/index.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<header>
+    <div>
+        <a href="#" id="menu-bars"><i class="fa-solid fa-bars"></i></a>
+        <div id="logo">Shoodi</div>
+        <!--<h1><a href="../login">Faça o login</a> </h1>-->
+    </div>
+      <div>
+        <div class="search">
+          <div class="search-bar" id="search_bar">
+            <input type="text" placeholder="Pesquise no Shoodi...">
+          </div>
+          <a href="#" id="search_btn" onclick="search_bar_anim()">
+            <div class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <p>0</p>
+        </div>
+      </div>
+</header>
+
+<body>
+    
+    <section class="main">
+        <a href="#" id="chat-icon" onclick="abrirChat()">
+            <i class="fa-regular fa-circle-question"></i>
+        </a>
+    
+        <div id="chatModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal()">&times;</span>
+                <h2>Chat</h2>
+                
+                <div class="duvida" id="duvida">
+                    <input type="text" id="pergunta" placeholder="Digite aqui dua duvida...">
+                    <div id="search-results"></div>
+                    <i class="fa-solid fa-magnifying-glass" onclick="enviarPergunta('')"></i>
+                </div>
+            </div>
+        </div>
+    
+        <a href="#" class="chat-icon" onclick="abrirModal()">
+            <i class="fa-regular fa-circle-question"></i>
+        </a>
+    </section>  
+
+        <div class="main-content">
+            <h1>Com <span>Shoodi</span> fica f&aacute;cil pedir.</h1>
+            <div class="location">
+                <div class="location-box">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <input type="text" name="user-location" id="user-location" placeholder="Onde voc&ecirc; quer receber seus produtos?">
+                </div>
+                <div class="my-loc">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <a href="#">Use minha localiza&ccedil;&atilde;o</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="branco">
+        kkk
+    </section> 
+    <section class="branco">
+        kkk
+    </section> 
+    <section class="branco">
+        kkk
+    </section> 
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <section id="news">
+        <div class="direito"><a class="pag" href="#">Hamb&uacute;rguers</a></div><div class="esquerdo"> <a class="pag" href="#">Combos</a></div>
+        <section class="um">
+            <div class="news-tiles">
+                <article class="news-tile">
+                    <div class="food-tile">
+                        <img src="{% static 'components/assets/img.cadastro.jpg'%}" alt="Hamb 1" width="500">
+                        <div class="food-tile-container">
+                        <div class="food-tile-container-info">
+                            <h4>Chegou o novo Double Spice!</h4>
+                            <p>Eita que suculência! É muita gostosura para só um hamburguer!</p>
+                        </div>
+                        <div class="food-tile-container-action">
+                            <a href="#">Partiu!</a>
+                        </div>
+                      </div>
+                    </div>
+                </article>
+              <article class="news-tile">
+                <div class="food-tile">
+                    <img src="{% static 'components/assets/hamb2.jpg'%}" alt="Hamb 1" width="500">
+                    <div class="food-tile-container">
+                        <div class="food-tile-container-info">
+                            <h4>Confira agora o nosso Big Rusty!</h4>
+                            <p>Um toque mais selvagem! Você vai se deliciar!</p>
+                        </div>
+                        <div class="food-tile-container-action">
+                            <a href="#">Partiu!</a>
+                        </div>
+                    </div>
+                </div>
+              </article>
+        </section>
+        <section class="um">
+            <div class="news-tiles">
+                <article class="news-tile">
+                    <div class="food-tile">
+                        <img src="{% static 'components/assets/img.cadastro.jpg'%}" alt="Hamb 1" width="500">
+                        <div class="food-tile-container">
+                        <div class="food-tile-container-info">
+                            <h4>Chegou o novo Double Spice!</h4>
+                            <p>Eita que suculência! É muita gostosura para só um hamburguer!</p>
+                        </div>
+                        <div class="food-tile-container-action">
+                            <a href="#">Partiu!</a>
+                        </div>
+                      </div>
+                    </div>
+                </article>
+              <article class="news-tile">
+                <div class="food-tile">
+                    <img src="{% static 'components/assets/hamb2.jpg'%}" alt="Hamb 1" width="500">
+                    <div class="food-tile-container">
+                        <div class="food-tile-container-info">
+                            <h4>Confira agora o nosso Big Rusty!</h4>
+                            <p>Um toque mais selvagem! Você vai se deliciar!</p>
+                        </div>
+                        <div class="food-tile-container-action">
+                            <a href="#">Partiu!</a>
+                        </div>
+                    </div>
+                </div>
+              </article>
+        </section>
+
+        <section class="um">
+            <div class="news-tiles">
+                <article class="news-tile">
+                    <div class="food-tile">
+                        <img src="{% static 'components/assets/img.cadastro.jpg'%}" alt="Hamb 1" width="500">
+                        <div class="food-tile-container">
+                        <div class="food-tile-container-info">
+                            <h4>Chegou o novo Double Spice!</h4>
+                            <p>Eita que suculência! É muita gostosura para só um hamburguer!</p>
+                        </div>
+                        <div class="food-tile-container-action">
+                            <a href="#">Partiu!</a>
+                        </div>
+                      </div>
+                    </div>
+                </article>
+              <article class="news-tile">
+                <div class="food-tile">
+                    <img src="{% static 'components/assets/hamb2.jpg'%}" alt="Hamb 1" width="500">
+                    <div class="food-tile-container">
+                        <div class="food-tile-container-info">
+                            <h4>Confira agora o nosso Big Rusty!</h4>
+                            <p>Um toque mais selvagem! Você vai se deliciar!</p>
+                        </div>
+                        <div class="food-tile-container-action">
+                            <a href="#">Partiu!</a>
+                        </div>
+                    </div>
+                </div>
+              </article>
+        </section>
+            </div>
+    </section>
+</body>
+</html>
